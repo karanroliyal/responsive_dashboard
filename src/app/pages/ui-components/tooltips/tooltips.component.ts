@@ -23,7 +23,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 export class AppTooltipsComponent {
   //  disabled
   disabled = new FormControl(false);
-
   // show and hide
   showDelay = new FormControl(1000);
   hideDelay2 = new FormControl(2000);

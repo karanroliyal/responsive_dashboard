@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 // ui
 import { AppBadgeComponent } from './badge/badge.component';
 import { AppChipsComponent } from './chips/chips.component';

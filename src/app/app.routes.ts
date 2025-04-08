@@ -4,30 +4,58 @@ import { FullComponent } from './layouts/full/full.component';
 import { AppSideLoginComponent } from './pages/authentication/side-login/side-login.component';
 
 export const routes: Routes = [
-{
-path:'',
-redirectTo:'/authentication/login',
-pathMatch:'full',
-},
-{
-path:'authentication/login',
-component:AppSideLoginComponent,
-title:'Log In',
-},
-
+  {
+    path: '',
+    redirectTo: '/authentication/login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'authentication/login',
+    component: AppSideLoginComponent,
+    title: 'Log In',
+  },
   {
     path: '',
     component: FullComponent,
     children: [
       {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
+        title: 'Dashboard',
+        path: 'dashboard',
+        loadComponent: () => import('./pages/dashboard/dashboard.component').then(c => c.DashboardComponent),
       },
       {
-        path: 'dashboard',
-        loadChildren: () =>
-          import('./pages/pages.routes').then((m) => m.PagesRoutes),
+        title: 'live monitoring',
+        path: 'live-monitor',
+        loadComponent: () => import('./pages/live-monitor/live-monitor.component').then(c => c.LiveMonitorComponent),
+      },
+      {
+        title: 'PG',
+        path: 'properties',
+        loadComponent: () => import('./pages/properties/properties.component').then(c => c.PropertiesComponent),
+      },
+      {
+        title: 'Pg Rooms',
+        path: 'pg-rooms',
+        loadComponent: () => import('./pages/rooms/rooms.component').then(c => c.RoomsComponent),
+      }, {
+        title: 'Tenants',
+        path: 'tenants',
+        loadComponent: () => import('./pages/tenents/tenents.component').then(c => c.TenentsComponent),
+      },
+      {
+        title: 'Owners',
+        path: 'owners',
+        loadComponent: () => import('./pages/owners/owners.component').then(c => c.OwnersComponent),
+      },
+      {
+        title: 'Plans',
+        path: 'plans',
+        loadComponent: () => import('./pages/plans/plans.component').then(c => c.PlansComponent),
+      },
+      {
+        title: 'Setting',
+        path: 'setting',
+        loadComponent: () => import('./pages/settings/settings.component').then(c => c.SettingsComponent),
       },
       {
         path: 'ui-components',
@@ -43,6 +71,8 @@ title:'Log In',
       },
     ],
   },
+
+
   {
     path: '',
     component: BlankComponent,
