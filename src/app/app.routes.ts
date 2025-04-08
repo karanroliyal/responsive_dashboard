@@ -1,8 +1,20 @@
 import { Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
+import { AppSideLoginComponent } from './pages/authentication/side-login/side-login.component';
 
 export const routes: Routes = [
+{
+path:'',
+redirectTo:'/authentication/login',
+pathMatch:'full',
+},
+{
+path:'authentication/login',
+component:AppSideLoginComponent,
+title:'Log In',
+},
+
   {
     path: '',
     component: FullComponent,
