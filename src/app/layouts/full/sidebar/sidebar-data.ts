@@ -12,7 +12,6 @@ export const navItems: NavItem[] = [
     iconName: 'solar:widget-add-line-duotone',
     route: 'live-monitor',
   },
-
   {
     displayName: 'PGs',
     iconName: 'fluent:home-person-24-regular',
@@ -27,13 +26,12 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Tenents',
     iconName: 'mdi:account-group-outline',
-
     route: 'tenants',
   },
   {
     displayName: 'owners',
     iconName: 'solar:user-id-line-duotone',
-        route: 'owners',
+    route: 'owners',
   },
   {
     displayName: 'Plan',

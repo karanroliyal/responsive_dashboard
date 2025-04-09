@@ -30,10 +30,14 @@
               "src/styles.scss",
               "src/assets/scss/style.scss",
               "src/assets//fonts/inter/inter.css",
-              "src/assets/fonts/material-icon/material-icons.css"
+              "src/assets/fonts/material-icon/material-icons.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
             "scripts": [
-              "src/assets/js/iconify.min.js"
+              "src/assets/js/iconify.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ],
             "browser": "src/main.ts"
           },
