@@ -13,7 +13,7 @@ import { FormValidationMessageComponent } from "../../../utility/form-validation
   templateUrl: './side-login.component.html',
 })
 export class AppSideLoginComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   showPassword = false;
 
   logInForm = new FormGroup({
@@ -21,17 +21,16 @@ export class AppSideLoginComponent {
     password: new FormControl('', [Validators.required]),
   });
 
-  get f() {
-    return this.logInForm.controls;
+  toggleShowPassword(): void {
+    this.showPassword = !this.showPassword;
   }
 
   submit() {
-    this.router.navigate(['']);
+    localStorage.setItem('token','kiran');
+    this.router.navigate(['/dashboard']);
   }
-  
 
-toggleShowPassword(): void {
-  this.showPassword = !this.showPassword;
-}
+
+
 
 }

@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
 import { AppSideLoginComponent } from './pages/authentication/side-login/side-login.component';
+import { loginAuthGuard } from './guards/login-auth.guard';
+import { dashboardAuthGuard } from './guards/dashboard-auth.guard';
 
 export const routes: Routes = [
   {
@@ -12,11 +14,13 @@ export const routes: Routes = [
   {
     path: 'authentication/login',
     component: AppSideLoginComponent,
+    canActivate:[dashboardAuthGuard],
     title: 'Log In',
   },
   {
-    path: '',
+    path: 'dashboard',
     component: FullComponent,
+    canActivate:[loginAuthGuard],
     children: [
       {
         title: 'Dashboard',
@@ -37,7 +41,8 @@ export const routes: Routes = [
         title: 'Pg Rooms',
         path: 'pg-rooms',
         loadComponent: () => import('./pages/rooms/rooms.component').then(c => c.RoomsComponent),
-      }, {
+      },
+       {
         title: 'Tenants',
         path: 'tenants',
         loadComponent: () => import('./pages/tenents/tenents.component').then(c => c.TenentsComponent),

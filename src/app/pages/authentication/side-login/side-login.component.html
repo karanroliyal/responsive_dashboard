@@ -30,7 +30,7 @@
               <app-form-validation-message [formGroup]="logInForm" controlName="password"
                 fieldName="Password"></app-form-validation-message>
             </div>
-            <a [routerLink]="['/dashboard']" mat-flat-button color="primary" class="w-100">
+            <a (click)="submit()" mat-flat-button color="primary" class="w-100">
               Log In
             </a>
           </form>
