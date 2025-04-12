@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../material.module';
-import { TablerIconsModule } from 'angular-tabler-icons';
 
 interface stats {
     id: number;
@@ -13,7 +12,7 @@ interface stats {
 
 @Component({
     selector: 'app-earning-reports',
-    imports: [MaterialModule, TablerIconsModule],
+    imports: [MaterialModule],
     templateUrl: './earning-reports.component.html',
 })
 export class AppEarningReportsComponent {

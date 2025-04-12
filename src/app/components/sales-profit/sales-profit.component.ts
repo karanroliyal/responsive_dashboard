@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { MaterialModule } from '../../material.module';
-import { TablerIconsModule } from 'angular-tabler-icons';
 
 import {
     ApexChart,
@@ -43,7 +42,7 @@ interface month {
 
 @Component({
     selector: 'app-sales-profit',
-    imports: [MaterialModule, TablerIconsModule, NgApexchartsModule, MatButtonModule, CommonModule],
+    imports: [MaterialModule, NgApexchartsModule, MatButtonModule, CommonModule],
     templateUrl: './sales-profit.component.html',
 })
 export class AppSalesProfitComponent {

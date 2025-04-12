@@ -18,7 +18,6 @@ import {
     NgApexchartsModule,
 } from 'ng-apexcharts';
 import { MatButtonModule } from '@angular/material/button';
-import { TablerIconsModule } from 'angular-tabler-icons';
 
 export interface totalincomeChart {
     series: ApexAxisChartSeries;
@@ -40,7 +39,7 @@ export interface totalincomeChart {
 @Component({
     selector: 'app-total-income',
     standalone: true,
-    imports: [MaterialModule, NgApexchartsModule, MatButtonModule, TablerIconsModule],
+    imports: [MaterialModule, NgApexchartsModule, MatButtonModule],
     templateUrl: './total-income.component.html',
 })
 export class AppTotalIncomeComponent {

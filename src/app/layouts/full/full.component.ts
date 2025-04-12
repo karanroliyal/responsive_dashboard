@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { CommonModule } from '@angular/common';
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { TablerIconsModule } from 'angular-tabler-icons';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppNavItemComponent } from './sidebar/nav-item/nav-item.component';
@@ -30,7 +29,6 @@ const TABLET_VIEW = 'screen and (min-width: 769px) and (max-width: 1024px)';
     CommonModule,
     SidebarComponent,
     NgScrollbarModule,
-    TablerIconsModule,
     HeaderComponent,
     // AppTopstripComponent
   ],

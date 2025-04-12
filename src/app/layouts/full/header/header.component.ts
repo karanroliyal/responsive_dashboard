@@ -5,7 +5,6 @@ import {
   Input,
   ViewEncapsulation,
 } from '@angular/core';
-import { TablerIconsModule } from 'angular-tabler-icons';
 import { MaterialModule } from 'src/app/material.module';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -18,7 +17,6 @@ import { MatBadgeModule } from '@angular/material/badge';
     RouterModule,
     CommonModule,
     NgScrollbarModule,
-    TablerIconsModule,
     MaterialModule,
     MatBadgeModule
   ],
